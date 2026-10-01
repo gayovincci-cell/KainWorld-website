@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KainWorld | Discover Filipino Food</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+        <nav>
+
+            <div class="logo">
+                <span>☀️</span>
+                <strong>Kain<span>World</span></strong>
+            </div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#foods">Foods</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <div class="nav-language">
+                🌎 Filipino Food • Global Flavors
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small">Discover</p>
+
+            <h1>
+                Filipino <span>Food</span>
+            </h1>
+
+            <p class="hero-description">
+                Authentic flavors. Rich culture.
+                <br>
+                The taste of the Philippines, in every bite.
+            </p>
+
+            <button onclick="exploreFoods()">
+                Explore Foods →
+            </button>
+
+        </div>
+
+        <div class="background-image">
+
+                    <img
+                        src="image/6077051914_dc62d1353e_b.jpg"
+                        alt="Filipino background"
+                    >
+        </div>
+    </section>
+
+
+    <!-- ================= FOODS ================= -->
+
+    <section id="foods">
+        
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                ☀️ KainWorld Food Guide
+            </p>
+
+            <h2>
+                Popular Filipino Foods
+            </h2>
+
+            <p>
+                Explore our most loved dishes, from classic favorites
+                to delicious Filipino specialties.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+
+            <div class="food-categories">
+
+    <button class="category-btn active" onclick="filterFoods('all')">
+        🍽️ All
+    </button>
+
+    <button class="category-btn" onclick="filterFoods('main')">
+        🍗 Main Dishes
+    </button>
+
+    <button class="category-btn" onclick="filterFoods('soup')">
+        🍲 Soups
+    </button>
+
+    <button class="category-btn" onclick="filterFoods('snack')">
+        🥟 Snacks
+    </button>
+
+    <button class="category-btn" onclick="filterFoods('dessert')">
+        🍰 Desserts
+    </button>
+
+    <button class="category-btn" onclick="filterFoods('grilled')">
+        🔥 Grilled
+    </button>
+
+</div>
+
+            <input
+                type="text"
+                id="foodSearch"
+                placeholder="🔍 Search Filipino food..."
+                onkeyup="searchFoods()"
+            >
+
+        </div>
+
+
+        <!-- FOOD CARDS -->
+
+        <div class="food-container">
+
+
+            <!-- ================= ADOBO ================= -->
+
+            <div class="food-card" data-category="main">
+
+                <div class="food-image">
+
+                    <img
+                        src="image/Filipino-Chicken-Adobo-Recipe-Vertical-Close-Up.jpg"
+                        alt="Chicken Adobo"
+                    >
+
+                    <span class="food-badge">
+                        🇵🇭 Classic Favorite
+                    </span>
+
+                </div>
+
+                <div class="food-card-content">
+
+                    <h3>Chicken Adobo</h3>
+
+                    <p class="food-description">
+                        A classic Filipino dish of tender chicken
+                        simmered in soy sauce, vinegar, garlic and spices.
+                    </p>
+
+                    <h4>🥘 Ingredients</h4>
+
+                    <ul class="ingredients">
+
+                        <li>Chicken — <strong>1 kg</strong></li>
+                        <li>Soy sauce — <strong>½ cup (120 ml)</strong></li>
+                        <li>Vinegar — <strong>½ cup (120 ml)</strong></li>
+                        <li>Garlic — <strong>6 cloves</strong></li>
+                        <li>Bay leaves — <strong>3 pieces</strong></li>
+                        <li>Whole peppercorns — <strong>1 tsp</strong></li>
+
+                    </ul>
+
+                    <button
+                        onclick="showFoodDetails('Chicken Adobo')"
+                        class="details-button"
+                    >
+                        View Recipe →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= SINIGANG ================= -->
+
+            <div class="food-card" data-category="soup">
+
+                <div class="food-image">
+
+                    <img
+                        src="image/R02988-Pork-Sinigang.jpg"
+                        alt="Sinigang"
+                    >
+
+                    <span class="food-badge green">
+                        Regional Favorite
+                    </span>
+
+                </div>
+
+                <div class="food-card-content">
+
+                    <h3>Sinigang</h3>
+
+                    <p class="food-description">
+                        A tangy and savory Filipino soup made with
+                        meat, vegetables and tamarind.
+                    </p>
+
+                    <h4>🥘 Ingredients</h4>
+
+                    <ul class="ingredients">
+
+                        <li>Pork — <strong>500 g</strong></li>
+                        <li>Tamarind — <strong>50 g</strong></li>
+                        <li>Tomatoes — <strong>2 pieces</strong></li>
+                        <li>Onion — <strong>1 piece</strong></li>
+                        <li>Radish — <strong>1 piece</strong></li>
+                        <li>String beans — <strong>100 g</strong></li>
+
+                    </ul>
+
+                    <button
+                        onclick="showFoodDetails('Sinigang')"
+                        class="details-button"
+                    >
+                        View Recipe →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= LUMPIA ================= -->
+
+            <div class="food-card" data-category="snack">
+
+                <div class="food-image">
+
+                    <img
+                        src="image/Vegan-Lumpiang-Shanghai-Filipino-Spring-Rolls-Sweet-Simple-Vegan-2.jpg"
+                        alt="Lumpia"
+                    >
+
+                    <span class="food-badge orange">
+                        Street Favorite
+                    </span>
+
+                </div>
+
+                <div class="food-card-content">
+
+                    <h3>Lumpia</h3>
+
+                    <p class="food-description">
+                        Crispy Filipino spring rolls filled with
+                        seasoned meat and vegetables.
+                    </p>
+
+                    <h4>🥘 Ingredients</h4>
+
+                    <ul class="ingredients">
+
+                        <li>Ground pork — <strong>500 g</strong></li>
+                        <li>Lumpia wrappers — <strong>25 pieces</strong></li>
+                        <li>Carrots — <strong>1 medium</strong></li>
+                        <li>Onion — <strong>1 medium</strong></li>
+                        <li>Garlic — <strong>3 cloves</strong></li>
+                        <li>Salt — <strong>1 tsp</strong></li>
+
+                    </ul>
+
+                    <button
+                        onclick="showFoodDetails('Lumpia')"
+                        class="details-button"
+                    >
+                        View Recipe →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= LECHON ================= -->
+
+            <div class="food-card" data-category="grilled">
+
+                <div class="food-image">
+
+                    <img
+                        src="image/Staple-food-in-every-filipino-noche-buena.jpg"
+                        alt="Lechon"
+                    >
+
+                    <span class="food-badge red">
+                        Fiesta Favorite
+                    </span>
+
+                </div>
+
+                <div class="food-card-content">
+
+                    <h3>Lechon</h3>
+
+                    <p class="food-description">
+                        A famous Filipino roasted pork dish known
+                        for its crispy skin and flavorful meat.
+                    </p>
+
+                    <h4>🥘 Ingredients</h4>
+
+                    <ul class="ingredients">
+
+                        <li>Whole pig — <strong>1 (6–8 kg)</strong></li>
+                        <li>Garlic — <strong>20 cloves</strong></li>
+                        <li>Lemongrass — <strong>5 stalks</strong></li>
+                        <li>Salt — <strong>2 tbsp</strong></li>
+                        <li>Black pepper — <strong>1 tbsp</strong></li>
+                        <li>Bay leaves — <strong>10 pieces</strong></li>
+
+                    </ul>
+
+                    <button
+                        onclick="showFoodDetails('Lechon')"
+                        class="details-button"
+                    >
+                        View Recipe →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= SISIG ================= -->
+
+            <div class="food-card" data-category="main">
+
+                <div class="food-image">
+
+                    <img
+                        src="image/Authentic_Kapampangan_Sisig.jpg"
+                        alt="Sisig"
+                    >
+
+                    <span class="food-badge green">
+                        Pampanga Favorite
+                    </span>
+
+                </div>
+
+                <div class="food-card-content">
+
+                    <h3>Sisig</h3>
+
+                    <p class="food-description">
+                        A savory Filipino dish made with chopped pork,
+                        onions, chili and calamansi.
+                    </p>
+
+                    <h4>🥘 Ingredients</h4>
+
+                    <ul class="ingredients">
+
+                        <li>Pork — <strong>500 g</strong></li>
+                        <li>Onion — <strong>1 medium</strong></li>
+                        <li>Calamansi juice — <strong>3 tbsp</strong></li>
+                        <li>Chili peppers — <strong>2 pieces</strong></li>
+                        <li>Soy sauce — <strong>2 tbsp</strong></li>
+                        <li>Mayonnaise — <strong>2 tbsp</strong></li>
+
+                    </ul>
+
+                    <button
+                        onclick="showFoodDetails('Sisig')"
+                        class="details-button"
+                    >
+                        View Recipe →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= HALO-HALO ================= -->
+
+            <div class="food-card" data-category="dessert">
+
+                <div class="food-image">
+
+                    <img
+                        src="image/IMG_1524.jpg"
+                        alt="Halo-Halo"
+                    >
+
+                    <span class="food-badge purple">
+                        Dessert Favorite
+                    </span>
+
+                </div>
+
+                <div class="food-card-content">
+
+                    <h3>Halo-Halo</h3>
+
+                    <p class="food-description">
+                        A colorful Filipino dessert made with shaved
+                        ice, milk, fruits and sweet toppings.
+                    </p>
+
+                    <h4>🍨 Ingredients</h4>
+
+                    <ul class="ingredients">
+
+                        <li>Shaved ice — <strong>2 cups</strong></li>
+                        <li>Sweet beans — <strong>½ cup</strong></li>
+                        <li>Ube — <strong>½ cup</strong></li>
+                        <li>Mixed fruits — <strong>1 cup</strong></li>
+                        <li>Evaporated milk — <strong>½ cup</strong></li>
+                        <li>Leche flan — <strong>1 piece</strong></li>
+
+                    </ul>
+
+                    <button
+                        onclick="showFoodDetails('Halo-Halo')"
+                        class="details-button"
+                    >
+                        View Recipe →
+                    </button>
+
+                </div>
+
+            </div>
+
+             <!-- ================= KARE-KARE ================= -->
+
+            <div class="food-card" data-category="main">
+
+                <div class="food-image">
+
+                    <img
+                    src="image/P022321101323_1-1500x2000.jpg"
+                    alt="Kare-Kare"
+                    >
+
+                    <span class="food-badge orange">
+                        Filipino Classic
+                    </span>
+
+                </div>
+
+                <div class="food-card-content">
+
+                    <h3>Kare-Kare</h3>
+
+                    <p class="food-description">
+                        A rich Filipino stew made with tender beef,
+                        vegetables and a flavorful peanut sauce.
+                    </p>
+
+                    <h4>🥜 Ingredients</h4>
+
+                    <ul class="ingredients">
+
+                        <li>Beef - <strong>1 kg</strong></li>
+                        <li>Peanut butter - <strong>% cup</strong></li>
+                        <li>Eggplant - <strong>2 peaces</strong></li>
+                        <li>String beans - <strong>200 g</strong></li>
+                        <li>Bok choy - <strong>3 pieces</strong></li>
+                        <li>Ground rice - <strong>% cup</strong></li>
+
+                    </ul>
+
+                    <button
+                        onclick="showFoodDetails('Kare-Kare')"
+                        class="details-button"
+                    >
+                        View Recipe →
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- ================= CHICKEN INASAL ================= -->
+
+            <div class="food-card" data-category="grilled">
+
+                <div class="food-image">
+
+                    <img
+                    src="image/20220906-Chicken-Inasal-Julia-Hartbeck-hero-01-565b615f634d4990a91217dfdaf0fbb7.jpg"
+                    alt="Chicken Inasal"
+                    >
+
+                    <span class="food-badge red">
+                        Grilled Favorite
+                    </span>
+
+                </div>
+
+                <div class="food-card-content">
+
+                    <h3>Chicken Inasal</h3>
+
+                    <p class="food-description">
+                        A popular Filipino grilled chicken marinated
+                        with vinegar, calamansi, garlic and spices.
+                    </p>
+
+                    <h4>🍗 Ingredients</h4>
+
+                    <ul class="ingredients">
+
+                        <li>Chicken - <strong>1 kg</strong></li>
+                        <li>Calamansi Juice - <strong>% cup</strong></li>
+                        <li>Vinegar - <strong>% cup</strong></li>
+                        <li>Garlic - <strong>6 cloves</strong></li>
+                        <li>Annatto oil - <strong>% cup</strong></li>
+                        <li>Brown sugar - <strong>2 tbsp</strong></li>
+
+                    </ul>
+
+                    <button
+                    onclick="showFoodDetails('Chicken Inasal')"
+                    class="details-button"
+                    >
+                    View Recipe →
+                </button>
+
+                </div>
+
+            </div>
+
+        <!-- ================= BULALO ================= -->
+
+        <div class="food-card" data-category="soup">
+
+            <div class="food-image">
+
+            <img 
+            src="image/IMG_3767.jpg" 
+            alt="Bulalo"
+            >
+
+            <span class="food-badge green">
+            Filipino Soup
+            </span>
+
+            </div>
+
+            <div class="food-card-content">
+
+            <h3>Bulalo</h3>
+
+            <p class="food-description">
+            A comforting Filipino beef soup made with
+            tender beef shank, bone marrow, and vegetables.
+            </p>
+
+            <h4>🍲 Ingredients</h4>
+
+            <ul class="ingredients">
+
+            <li>Beef shank — <strong>1 kg</strong></li>
+            <li>Water — <strong>8 cups</strong></li>
+            <li>Corn — <strong>2 pieces</strong></li>
+            <li>Potatoes — <strong>2 pieces</strong></li>
+            <li>Cabbage — <strong>½ head</strong></li>
+            <li>Fish sauce — <strong>2 tbsp</strong></li>
+
+            </ul>
+
+            <button 
+            onclick="showFoodDetails('Bulalo')" 
+            class="details-button"
+            >
+            View Recipe →
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ================= LECHE FLAN ================= -->
+
+    <div class="food-card" data-category="dessert">
+
+    <div class="food-image">
+
+        <img 
+            src="image/Filipino-Leche-Flan.jpg" 
+            alt="Leche Flan"
+        >
+
+        <span class="food-badge purple">
+            Dessert Favorite
+        </span>
+
+    </div>
+
+    <div class="food-card-content">
+
+        <h3>Leche Flan</h3>
+
+        <p class="food-description">
+            A smooth Filipino custard dessert made with egg yolks,
+            condensed milk, and caramelized sugar.
+        </p>
+
+        <h4>🍮 Ingredients</h4>
+
+        <ul class="ingredients">
+
+            <li>Egg yolks — <strong>10 pieces</strong></li>
+            <li>Condensed milk — <strong>1 can (390g)</strong></li>
+            <li>Evaporated milk — <strong>1 can (370ml)</strong></li>
+            <li>Sugar — <strong>1 cup</strong></li>
+            <li>Vanilla extract — <strong>1 teaspoon</strong></li>
+
+        </ul>
+
+        <button
+            onclick="showFoodDetails('Leche Flan')"
+            class="details-button"
+        >
+            View Recipe →
+        </button>
+
+    </div>
+
+</div>
+    </div>
+        </div>
+    </section>  
+
+    <!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <!-- BACKGROUND IMAGE -->
+    <img
+        class="about-background"
+        src="image/360_F_309460231_0E4GP3MvocLkKzLRLC74HZ14nFN9Bbj2.jpg"
+        alt="Filipino food background"
+    >
+
+    <!-- DARK/BRIGHT OVERLAY -->
+    <div class="about-overlay"></div>
+
+    <!-- CONTENT -->
+    <div class="about-content">
+
+        <p class="section-label">
+            ☀️ ABOUT KAINWORLD
+        </p>
+
+        <h2>
+            More Than Just Food
+        </h2>
+
+        <p>
+            KainWorld is your gateway to the rich and diverse
+            flavors of the Philippines. We bring traditional
+            recipes, regional favorites and authentic Filipino
+            dishes to food lovers around the world.
+        </p>
+
+        <button onclick="openAboutPopup()">
+            Learn More →
+        </button>
+
+    </div>
+
+    <div class="about-art">
+        🇵🇭
+        <br>
+        <strong>Filipino Food</strong>
+        <br>
+        for the World ❤️
+    </div>
+
+</section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>🇵🇭 KainWorld</h3>
+
+        <p>
+            Discover Filipino Food. Share Filipino Culture.
+        </p>
+
+        <p>
+            © 2026 KainWorld. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= FOOD MODAL ================= -->
+
+<div id="foodModal" class="food-modal">
+
+    <div class="food-modal-content">
+
+        <!-- Close button -->
+        <button
+            class="close-button"
+            onclick="closeFoodDetails()"
+        >
+            ✕
+        </button>
+
+        <!-- Food name -->
+        <h2 id="modalFoodName">
+            Food Name
+        </h2>
+
+        <!-- Description -->
+        <p id="modalFoodDescription">
+            Food description
+        </p>
+
+        <!-- Cooking time -->
+        <div class="recipe-time">
+            ⏱️ Cooking Time:
+            <strong id="modalCookingTime">
+                45 minutes
+            </strong>
+        </div>
+
+        <!-- Ingredients -->
+        <h3>🥘 Ingredients</h3>
+
+        <ul id="modalFoodIngredients"></ul>
+
+        <!-- Instructions -->
+        <h3>👨‍🍳 How to Prepare</h3>
+
+        <ol id="modalFoodInstructions"></ol>
+
+        <!-- Origin -->
+        <h3>📍 Origin</h3>
+
+        <p id="modalFoodOrigin">
+            Philippines
+        </p>
+
+    </div>
+
+</div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+    <!-- ABOUT POPUP -->
+
+    <div id="aboutPopup" class="about-popup">
+
+        <div class="about-popup-content">
+
+            <button class="about-close" onclick="closeAboutPopup()">
+                ✕
+            </button>
+
+            <h2>About KainWorld 🇵🇭</h2>
+
+            <p>
+                KainWorld is a place to discover the rich flavor,
+                recipes and culture of Filipino food.
+            </p>
+
+            <p>
+                Explore traditional dishes, learn about their ingredients
+                and discover the stories behind Filipino cuisine.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
